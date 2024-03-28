@@ -1,0 +1,210 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template:
+        "menu"
+}
+
+.recommandations {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin-left: 250px;
+    grid-template:
+        ". a a m m ." minmax(30px, 50px)
+        ". . . . . ." minmax(5px,15px)
+        ". u u d d ." minmax(30px, 150px)
+        ". u2 u2 d2 d2 ." minmax(30px, 150px)
+        ". u3 u3 d3 d3 ." minmax(30px, 150px)
+        ". u4 u4 d4 d4 ." minmax(30px, 150px)
+        ". u5 u5 d5 d5 ." minmax(30px, 150px);
+    border-radius: 15px;
+    gap: 15px;
+    column-gap: 50px;
+    grid-auto-flow: row dense;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.un {
+    grid-area: u;
+    background-color: var(--color2);
+
+}
+
+.un2 {
+    grid-area: u2;
+    background-color: var(--color2);
+
+}
+
+.un3 {
+    grid-area: u3;
+    background-color: var(--color2);
+
+}
+
+.un4 {
+    grid-area: u4;
+    background-color: var(--color2);
+
+}
+
+.deux {
+    grid-area: d;
+    background-color: var(--color4);
+}
+
+.deux2 {
+    grid-area: d2;
+    background-color: var(--color4);
+}
+
+.deux3 {
+    grid-area: d3;
+    background-color: var(--color4);
+}
+
+.deux4 {
+    grid-area: d4;
+    background-color: var(--color4);
+}
+
+.a {
+    grid-area: a;
+    background-color: #3d405b;
+    text-align: center;
+    border-radius: 15px;
+    width: 60%;
+    max-width: 900px;
+    min-width: 350px;
+}
+
+.m {
+    grid-area: m;
+    background-color: #3d405b;
+    text-align: center;
+    border-radius: 15px;
+    width: 60%;
+    max-width: 900px;
+    min-width: 350px;
+}
+
+.content {
+    display: grid;
+    grid-template-areas:
+                "img titre"
+                "img arti";
+    grid-template-columns: 165px 1fr;
+    grid-template-rows: 37.5px 112.5px;
+    margin-top:20px;
+    width: 60%;
+    max-width: 900px;
+    min-width: 350px;
+    border-radius: 15px;
+}
+.content :first-child{
+    grid-area: img;
+}
+.content :first-of-type p {
+    grid-area: titre;
+}
+.content :last-child{
+    grid-area: arti;
+}
+
+.img{
+    grid-area:img;
+    height: 86.6%;
+    border-radius: 15px 0px 0px 15px;
+    width: 90%;
+    object-fit: cover;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        local("Trickster"),
+        url("../font-familly/Poppins-Black.ttf");
+    }
+
+@media only screen and (max-width: 1300px) {
+    .recommandations {
+        grid-template:
+            ". a a ." minmax(30px, 50px)
+            ". . . ." minmax(5px,15px)
+            ". u u ." minmax(30px, 150px)
+            ". u2 u2 ." minmax(30px, 150px)
+            ". u3 u3 ." minmax(30px, 150px)
+            ". u4 u4 ." minmax(30px, 150px)
+            ". m m ." minmax(30px, 50px)
+            ". . . ." minmax(5px,15px)
+            ". d d ." minmax(30px, 150px)
+            ". d2 d2 ." minmax(30px, 150px)
+            ". d3 d3 ." minmax(30px, 150px)
+            ". d4 d4 ." minmax(30px, 150px);
+        margin-left: 240px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .recommandations {
+        margin-left: 200px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .recommandations {
+        margin-left: 165px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .recommandations {
+        margin-left: 80px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .recommandations {
+        grid-template:
+            ". a ." minmax(30px, 50px)
+            ". u ." minmax(30px, 250px)
+            ". u2 ." minmax(30px, 250px)
+            ". u3 ." minmax(30px, 250px)
+            ". u4 ." minmax(30px, 250px)
+            ". . ." minmax(30px, 50px)
+            ". m ." minmax(30px, 50px)
+            ". d ." minmax(30px, 250px)
+            ". d2 ." minmax(30px, 250px)
+            ". d3 ." minmax(30px, 250px)
+            ". d4 ." minmax(30px, 250px);
+        margin-left: 100px;
+    }
+
+    .content {
+        grid-template-areas:
+                "img img"
+                "img img"
+                "titre arti";
+        min-width: 250px;
+        height: 225px;
+    }
+    .img{
+        grid-area:img;
+        height: 100%;
+        border-radius: 15px 15px 0px 0px;
+        width: 100%;
+    }
+    .a {
+        min-width: 250px;
+    }
+    
+    .m {
+        min-width: 250px;
+    }
+}

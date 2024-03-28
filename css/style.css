@@ -1,0 +1,107 @@
+/*variable*/
+:root {
+    --color1: rgb(244,241,222);
+    --color2: rgb(224,122,95);
+    --color3: #3D405B;
+    --color4: rgb(81,178,154);
+    --color5: rgb(242,204,143);
+
+    --color6: rgb(238, 220, 187);
+
+    --fontSize1: 16px;
+    --fontSize2: 12px;
+
+    --colorBody: 'white';
+    --oppositeColorBody: 'black';
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: middle;
+    font-family: Poppins;
+    font-size: var(--fontSize1);
+}
+
+body {
+    background-color: var(--colorBody);
+}
+
+/* BOUTONS */
+.button {
+    display: inline-block;
+    border: 2px solid;
+    cursor: pointer;
+}
+.button:active {
+    transform: translateY(3px);
+}
+
+.big_button {
+    padding: 5px 3px;
+    border-radius: 5px;
+}
+
+.small_button {
+    font-size: var(--fontSize2);
+    border-radius: 20px;
+    padding: 5px 5px;
+}
+
+.main_button {
+    background-color: var(--color2);
+    border-color: var(--color2);
+    color: white;
+}
+.main_button:hover {
+    background-color: var(--color5);
+    border-color: var(--color5);
+}
+
+.second_button {
+    background-color: var(--colorBody);
+    border-color: var(--color2);
+    color: var(--color2);
+}
+.second_button:hover{
+    background-color: var(--color6);
+}
+
+.third_button {
+    background-color: var(--colorBody);
+    border-color: var(--oppositeColorBody);
+    color: var(--oppositeColorBody);
+}
+
+.disable_button {
+    background-color: #d9d9d9;
+    color: black;
+    border-color: #d9d9d9;
+
+    pointer-events: none;
+    cursor: default;
+}
+
+.boite {
+    border-radius: 20px;
+    box-shadow: 5px 5px 1px grey;
+  }
+  
+@font-face {
+font-family: "Poppins";
+src:
+    local("Trickster"),
+    url("../font-familly/Poppins-Black.ttf");
+}
+
+/* LIENS */
+.link {
+    color: var(--color4);
+}
+
+.link:hover {
+    color: var(--color4);
+    text-decoration: underline;
+}

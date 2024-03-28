@@ -1,0 +1,28 @@
+@media only screen and (min-width: 600px) {
+    .a_propos {
+        margin-left: var(--menusWidth);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .a_propos {
+        margin-left: 100px;
+    }
+}
+
+h2 {
+    background-color: #3d405b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+    width : 400px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 1px grey;
+}
+
+.a_propos {
+    padding: 30px;
+}

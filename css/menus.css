@@ -1,0 +1,142 @@
+body {
+    background-color: white;
+
+    --menusWidth : 250px;
+}
+
+.listLink, .linkUser {
+    list-style: none;
+}
+
+
+#menusBody {
+    position: fixed;
+    display: flex;
+
+    top: 0;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--color1);
+    z-index: 10;
+}
+
+#menusBody > div {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.listLink > a > p, .linkUser > a > p {
+    display: inline-block;
+    padding: 4px 8px;
+    color: black;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.listLink > a:hover > p, .linkUser > a:hover > p {
+    background: var(--color5);
+}
+
+
+@media only screen and (max-width: 601px) {
+    #menusBody {
+        width: 100px;
+        transition: 0.5s all;
+    }
+
+    #menusBody > div {
+        padding-bottom: 50px;
+    }
+
+
+
+    .iconMainMenus {
+        width: 100px;
+        margin: 20px 0 50px 0;
+    }
+
+    .iconLinkMenus {
+        height: 40px;
+        width: 40px;
+        margin-top: 10px;
+    }
+
+    .listLink > a > p, .linkUser > a > p {
+        display: none;
+    }
+
+    #buttonExtend {
+        position: fixed;
+        bottom: 0;
+        height: 40px;
+        width: 100px;
+        border: 1px solid black;
+        background-color: var(--color1);
+        cursor: pointer;
+        z-index: 20;
+
+        transition: 0.5s all;
+    }
+    #menusBody.extend /*, #menusBody:hover*/{
+        width: var(--menusWidth);
+    }
+
+    #menusBody.extend + button#buttonExtend /*, #menusBody:hover + button#buttonExtend*/ {
+        width: var(--menusWidth);
+    }
+
+    #menusBody.extend > div > ul > .listLink > a > p,#menusBody.extend > div > ul > .linkUser > a > p /*, #menusBody:hover > div > ul > .listLink > a > p,#menusBody:hover > div > ul > .linkUser > a > p */{
+        display: inline-block;
+        height: 100%;
+    }
+
+    #menusBody.extend > div > ul > .listLink > a,#menusBody.extend > div > ul > .linkUser > a /*, #menusBody:hover > div > ul > .listLink > a,#menusBody:hover > div > ul > .linkUser > a */{
+        height: 100%;
+
+        display: flex;
+        align-items: end;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #menusBody {
+        width: var(--menusWidth);
+    }
+
+    #menusBody > div {
+        padding-bottom: 30px;
+    }
+
+
+    .iconMainMenus {
+        width: 150px;
+        margin: 30px 0;
+    }
+
+    .iconLinkMenus {
+        height: 24px;
+        width: 24px;
+        margin-right: 10px;
+    }
+
+    .listLink, .linkUser {
+        width: calc(var(--menusWidth) - 20px);
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    #buttonExtend {
+        display: none;
+    }
+}
+

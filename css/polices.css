@@ -1,0 +1,8 @@
+.wrapper{
+    font-family: Poppins;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Trickster"), url("../font-familly/Poppins-Black.ttf");
+  }

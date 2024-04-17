@@ -1,221 +1,13 @@
-/*
-.wrapper {
-  height: 100%;
-  display: grid;
-  column-gap: 15px;
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: 1fr;
-}
-
-.wrapper_stats {
-  grid-column: 2;
-  grid-row: 1;
-  height: 100%;
-  display: grid;
-  row-gap: 15px;
-  column-gap: 15px;
-  grid-template:
-    "_1 T _2" 30px
-    "a a a"
-    "_3 T2 _4" 30px
-    "s s s";
-  margin-top: 3%;
-}
-
-.menusBody {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.titre {
-  background-color: #3d405b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  height: 100%;
-}
-
-.wrapper_stats > .t1{
-  grid-area: T;
-  width: 150%;
-}
-
-.top {
-  grid-area: a;
-  display: grid;
-  grid-template: "t2 t1 t3" auto;
-  column-gap: 25px;
-}
-
-.Titre {
-  font-size: x-large;
-}
-
-.cont {
-  grid-row: 3;
-}
-
-.info img {
-  border-radius: 6px;
-  justify-self: center;
-  object-fit: cover;
-  align-self: center;
-  width: 100px;
-  height: 100px;
-}
-
-.second {
-  grid-area: t2;
-  margin-top: 7%;
-  background-color: #e07a5f;
-}
-
-.first {
-  grid-area: t1;
-  background-color: #f2cc8f;
-}
-
-.theird {
-  grid-area: t3;
-  margin-top: 10%;
-  background-color: #3d405b;
-  color: #f4f1de;
-}
-
-.info {
-  display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
-}
-
-.boite {
-  border-radius: 20px;
-  box-shadow: 5px 5px 1px grey;
-  width: 100%;
-  justify-self: center;
-}
-
-.wrapper_stats > .t2 {
-  grid-area: T2;
-  width: 150%;
-}
-
-.stats {
-  grid-area: s;
-  display: grid;
-  grid-template-rows: 1fr 1fr 2fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "sa sa ssa ssb"
-    "sa sa ssc ssd"
-    "se se se se";
-  column-gap: 25px;
-  row-gap: 15px;
-  height: 500px;
-}
-
-.three {
-  background-color: #81b29a;
-}
-
-.gros {
-  background-color: white;
-  width: 100%;
-}
-
-.graph1 {
-  grid-area: sa;
-  border: 6px solid #3d405b;
-}
-
-.graph2 {
-  grid-area: se;
-  border: 6px solid #81b29a;
-}
-
-.info span {
-  margin-left: 3%;
-  margin-top: 3%;
-}
-
-#chartContainer,
-#chartContainer2 {
-  grid-row: 3;
-  margin: 5px;
-  height: 98%;
-  width: 98%;
-}
-
-body {
-  background-color: #f4f1de;
-}
-
-.multi {
-  grid-area: ssb;
-  border: 6px solid #3d405b;
-}
-
-.stats_mois {
-  background-color: #e07a5f;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 3px;
-}
-
-.s_titre {
-  font-size: 20px;
-}
-
-.s_cont {
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 25px;
-}
-
-.s_info {
-  font-size: 10px;
-  font-style: normal;
-  margin-top: auto;
-}
-
-
-@media only screen and (max-width: 600px) {
-  .wrapper {
-    grid-template-columns: 100px 1fr;
-  }
-
-  .info > img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media only screen and (max-width: 930px) {
-  .stats {
-    height: 800px;
-    grid-template-rows: 3fr 1fr 1fr 3fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "sa sa"
-      "ssa ssb"
-      "ssc ssd"
-      "se se";
-  }
-  .Titre{
-    font-size: medium;
-  }
-  .info > img {
-    width: 75px;
-    height: 75px;
-  }
-}*/
 body{
   display: grid;
   grid-area: "menus body";
   grid-template-columns: 250px 1fr;
   grid-template-rows: 1fr;
 
+}
+img{
+  width: 400px;
+  height: 350px;
 }
 .contenus{
   grid-area: body;
@@ -273,19 +65,21 @@ body{
 .projet{
   display: grid;
   grid-template-areas: "p1 p2";
-}
-.projet :first-child{
-  grid-area: p1;
-}
-.projet :last-child{
-  grid-area: p2;
-}
-.projet{
   width: 75%;
   justify-content: center;
+  grid-template-columns: 400px 400px;
   column-gap: 10px;
   position: relative;
 }
+.projet :first-child{
+  grid-area: p1;
+  width: 400px;
+}
+.projet :last-child{
+  grid-area: p2;
+  width: 400px;
+}
+
 .Projets{
   display: flex;
   flex-direction: column;
@@ -303,13 +97,50 @@ img{
   position: absolute;
   z-index: 1;
   background-color: white;
+  color: black;
+  width: fit-content;
   left: 5px;
   top: 15px;
 }
 #s2{
   position: absolute;
   z-index: 1;
+  color: black;
   background-color: white;
-  left: 265px;
+  width: fit-content;
+  left: 415px;
   top: 15px;
+}
+@media only screen and (max-width: 600px){
+  body{
+    grid-template-columns: 100px;
+  }
+}
+@media only screen and (max-width: 1080px){
+  .wrapper{
+    display: grid;
+    grid-template-areas: 
+    "img"
+    "titre"
+    "intro";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .projet{
+    display: grid;
+    grid-template-areas: 
+    "p1"
+    "p2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #s2{
+    position: absolute;
+    z-index: 1;
+    color: black;
+    background-color: white;
+    width: fit-content;
+    left: 5px;
+    top: 260px;
+  }
 }

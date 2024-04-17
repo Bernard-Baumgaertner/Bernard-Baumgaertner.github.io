@@ -3,8 +3,9 @@ body{
     grid-template-areas: "menus body";
     grid-template-columns: 250px 1fr;
 }
-.p{
+.P{
     grid-area: body;
+    background-color: rgb(243, 243, 243);
 }
 .menusBody{
     grid-area: menus;
@@ -13,18 +14,22 @@ body{
     display: grid;
     grid-template-areas:
     "titre titre" 
-    "img t"
-    "t2 img2"
-    "img3 t3"
-    "t4 img4";
+    "desc desc"
+    "t img"
+    "img2 t2"
+    "t3 img3";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px 100px 400px 400px 400px;
     justify-items: center;
     align-items: center;
     row-gap: 10px;
     margin: 50px;
 }
-p{
+img{
+    width: 450px;
+    height: 300px;
+}
+.p{
     text-align: center;
 }
 .t{
@@ -33,19 +38,21 @@ p{
 }
 .h{
     font-size: xx-large;
-    background-color: rgb(105, 0, 150);
+    background-color: black;
+    color: white;
+    padding: 5px;
 }
 #t1{
     grid-area: t;
+    text-wrap: wrap;
 }
 #t2{
     grid-area: t2;
+    text-wrap: wrap;
 }
 #t3{
     grid-area: t3;
-}
-#t4{
-    grid-area: t4;
+    text-wrap: wrap;
 }
 #i1{
     grid-area: img;
@@ -55,21 +62,20 @@ p{
 }
 #i3{
     grid-area: img3;
-}
-#i4{
-    grid-area: img4;
+    display: flex;
+    flex-direction: row;
 }
 
 .P2{
     display: grid;
     grid-template-areas:
     "titre titre" 
-    "img t"
-    "t2 img2"
-    "img3 t3"
-    "t4 img4";
+    "desc desc"
+    "t img"
+    "img2 t2"
+    "t3 img3";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px 100px 400px 400px 400px;
     justify-items: center;
     align-items: center;
     row-gap: 10px;
@@ -77,7 +83,9 @@ p{
 }
 .h2{
     font-size: xx-large;
-    background-color: rgb(105, 0, 150);
+    background-color: black;
+    padding: 5px;
+    color: white;
 }
 .ti{
     grid-area: titre;
@@ -85,16 +93,17 @@ p{
 }
 #te{
     grid-area: t;
+    text-wrap: wrap;
 }
 #te2{
     grid-area: t2;
+    text-wrap: wrap;
 }
 #te3{
     grid-area: t3;
+    text-wrap: wrap;
 }
-#te4{
-    grid-area: t4;
-}
+
 #im{
     grid-area: img;
 }
@@ -104,6 +113,101 @@ p{
 #im3{
     grid-area: img3;
 }
-#im4{
-    grid-area: img4;
+#desc{
+    grid-area: desc;
+    text-wrap: wrap;
+}
+#desc2{
+    grid-area: desc;
+    text-wrap: wrap;
+}
+@media only screen and (max-width: 600px){
+    body{
+      grid-template-columns: 100px;
+    }
+}
+@media only screen and (max-width: 1650px){
+    .P1{
+        display: grid;
+        grid-template-areas:
+        "titre titre" 
+        "desc desc"
+        "t img"
+        "img2 t2"
+        "t3 img3";
+        grid-template-columns: 1fr 600px;
+        grid-template-rows: 70px 100px 400px 400px 700px;
+    }
+    .P2{
+        display: grid;
+        grid-template-areas:
+        "titre titre" 
+        "desc desc"
+        "t img"
+        "img2 t2"
+        "t3 img3";
+        grid-template-columns: 1fr 600px;
+    }
+    #i3{
+        grid-area: img3;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 1350px){
+    img{
+        width: 300px;
+        height: 200px;
+    }
+    .P1{
+        display: grid;
+        grid-template-areas:
+        "titre titre" 
+        "desc desc"
+        "t img"
+        "img2 t2"
+        "t3 img3";
+        grid-template-columns: 1fr 300px;
+        grid-template-rows: 70px 100px 400px 400px 600px;
+    }
+    .P2{
+        display: grid;
+        grid-template-areas:
+        "titre titre" 
+        "desc desc"
+        "t img"
+        "img2 t2"
+        "t3 img3";
+        grid-template-columns: 1fr 300px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .P1{
+        display: grid;
+        grid-template-areas:
+        "titre" 
+        "desc"
+        "t"
+        "img"
+        "t2"
+        "img2"
+        "t3"
+        "img3";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 200px 1fr 200px 1fr 450px;
+    }
+    .P2{
+        display: grid;
+        grid-template-areas:
+        "titre" 
+        "desc"
+        "t"
+        "img"
+        "t2"
+        "img2"
+        "t3"
+        "img3";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 }

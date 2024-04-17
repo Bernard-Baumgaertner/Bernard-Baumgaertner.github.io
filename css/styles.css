@@ -1,3 +1,4 @@
+/*
 .wrapper {
   height: 100%;
   display: grid;
@@ -208,4 +209,107 @@ body {
     width: 75px;
     height: 75px;
   }
+}*/
+body{
+  display: grid;
+  grid-area: "menus body";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1fr;
+
+}
+.contenus{
+  grid-area: body;
+}
+.menusBody{
+  grid-area: menus;
+}
+.wrapper{
+  display: grid;
+  grid-template-areas: 
+  "img titre"
+  "intro intro";
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 1fr 150px;
+  grid-row-gap: 10px;
+  justify-items: center;
+}
+.Image{
+  grid-area: img;
+  border-radius: 15px 15px 15px 15px;
+}
+.Titre{
+  grid-area: titre;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column
+}
+#intro{
+  grid-area: intro;
+  text-align: center;
+  font-size: medium;
+}
+.Titre > h5 {
+  font-size: 60px;
+  text-align: center;
+}
+.Titre > h4 {
+  font-size: x-large;
+  text-align: center;
+}
+.info {
+  display: flex;
+  margin: 10px;
+  width: 100%;
+}
+.info > h2{
+  margin-right: 5px;
+  justify-self: center;
+}
+#t{
+  font-size: x-large;
+  text-align: center;
+}
+.projet{
+  display: grid;
+  grid-template-areas: "p1 p2";
+}
+.projet :first-child{
+  grid-area: p1;
+}
+.projet :last-child{
+  grid-area: p2;
+}
+.projet{
+  width: 75%;
+  justify-content: center;
+  column-gap: 10px;
+  position: relative;
+}
+.Projets{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Projets > h4{
+  font-size: x-large;
+}
+img{
+  width: 250px;
+  height: 250px;
+}
+#s1{
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  left: 5px;
+  top: 15px;
+}
+#s2{
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  left: 265px;
+  top: 15px;
 }

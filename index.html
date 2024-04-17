@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/polices.css">
     <link rel="stylesheet" href="css/menus.css">
     <link rel="stylesheet" href="css/style.css">
@@ -15,18 +15,15 @@
         <ul>
           <li class="listLink">
             <a href="index.html">
-              <img src="image/historical.png" alt="" class="iconLinkMenus">
               <p>Présentation</p>
             </a>
           </li>
           <li class="listLink">
             <a href="Projets.html">
-              <img src="image/settings.png" alt="" class="iconLinkMenus">
               <p>Projets</p>
             </a>
           </li>
           <li class="listLink"><a href="Profil.html">
-            <img src="image/info.png" alt="" class="iconLinkMenus">
             <p>Profil</p>
           </a>
           </li>
@@ -35,36 +32,34 @@
     </div>
   </div>
   <button id="buttonExtend" onclick="t()">+</button>
+  <div class="contenus">
     <div class="wrapper">
       <img src="./image/canvas.png" alt="Ma Tête" class="Image T">
-      <h5> Baumgaertner Bernard</h5>
-      <h4> Je suis étudiant en BUT informatique à L'IUT de Nantes</h4>
-      <p>Je m’appelle Bernard Baumgaertner , j’ai 19 ans et je suis actuellement en première année de BUT informatique à l’IUT de Nantes . J’ai choisi cette formations car l’informatique m’a toujours intéressé et je souhaitais donc apprendre comment fonctionnent les différentes application dont tout le monde se sert au quotidien. Je suis encore incertains sur le fait de poursuivre mes études avec un diplôme d’ingénieur ou un master , ou partir directement dans la vie professionnelle.</p>
+      <div class="Titre">
+        <h5> Baumgaertner Bernard</h5>
+        <h4> Je suis étudiant en BUT informatique à L'IUT de Nantes</h4>
+      </div>
+      <p id="intro">Je m’appelle Bernard Baumgaertner , j’ai 19 ans et je suis actuellement en première année de BUT informatique à l’IUT de Nantes . J’ai choisi cette formations car l’informatique m’a toujours intéressé et je souhaitais donc apprendre comment fonctionnent les différentes application dont tout le monde se sert au quotidien. Je suis encore incertains sur le fait de poursuivre mes études avec un diplôme d’ingénieur ou un master , ou partir directement dans la vie professionnelle.</p>
     </div>
-    <div class="infod G">
+    <h3 id="t">CV et lettre de motivation</h3>
+    <div class="info G">
       <h2>Mon CV : </h2>
-      <a href="./infos/BAumgaertner BErnard.pdf">CV en PDF</a>
+      <a target="_blank" href="./infos/BAumgaertner BErnard.pdf">CV en PDF</a>
+    </div>
+    <div class="info G 2">
+      <h2>Ma lettre de motivation :</h2>
+      <a target="_blank" href="infos/lettre motivation.pdf">Lettre de motivation en PDF</a>
     </div>
     <div class="Projets">
-      <a href="http://"  rel="noopener noreferrer">
-        <div class="projets">
-          <p>Petit resumer du projet</p>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </div>
-      </a>
-      <a href="http://"  rel="noopener noreferrer">
+      <h4>Mes projets récents</h4>
         <div class="projet">
-          <p>Petit resumer du projet</p>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
+          <a href=""><span id="s1">aaaa</span><img src="/image/canvas.png" alt="" ></a>
+          <a href=""><span id="s2">aaaaa</span><img src="/image/canvas.png" alt=""></a>
         </div>
-      </a>
     </div>
+
+  </div>
+   
     
     
   </body>
